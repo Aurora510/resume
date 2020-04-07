@@ -44,7 +44,7 @@ var myResumeData = {
     }],
     proShowData:[{
         url:'./imgs/tpp.jpg',
-        href:'https://aurora510.github.io/tpp/#/',
+        href:'https://aurora510.github.io/tpp/',
         proName:'vue-电影在线选购',
         title:'电影选购-移动端',
         intro:'利用vue搭建的电影在线选购程序，具有城市选择，电影浏览，查看电影详情，影院浏览功能<br><i>特别说明：</i>只有热门城市进行了数据绑定，其他城市根据热门城市进行随机绑定，其中的数据是采用mock方式模拟出来的',
