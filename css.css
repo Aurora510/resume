@@ -1,0 +1,262 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+body{color:#555;font-size: 18px;}
+/*全局样式*/
+.flex{
+    display: flex;
+}
+.mrTop{margin-top:20px;}
+.mrBot{margin-bottom:10px;}
+
+/*统一样式设置*/
+/*小三角*/
+.angle{
+    display: inline-block;
+    width:0;
+    border-left: 15px solid #00C2B3;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    margin-bottom: -7px;
+    cursor: pointer;
+    transition:all 1s;
+}
+/*线条*/
+.line{
+    position: absolute;
+    top:20px;
+    right:0px;
+    height:2px;
+    background-color:#555;
+}
+/*h2标题*/
+.title{display: inline-block;}
+.title h2{display: inline-block;margin-left: 8px;}
+/*h3标题*/
+.title h3{display: inline-block;margin-left: 8px;}
+
+
+#container{
+    width:1200px;
+    margin:20px auto;
+}
+/*信息*/
+.info{
+    width:100%;
+    margin-bottom: 50px;
+}
+/* 照片 */
+.info .photo{
+    /* position: relative; */
+    width:35%;
+    background-color: #DEDDDE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info .photo .image{
+    width:265px;
+    height:265px;
+    border:5px solid #00d7c6;
+    margin:30px auto 50px;
+}
+.info .photo .image img{
+    width:100%;
+    height:100%;
+}
+.info .photo .name{
+    font-size: 46px;
+    color:#333;
+    font-weight: 600;
+    text-align: center;
+}
+.info .photo .engName{
+    font-size: 30px;
+    color:#333;
+    font-weight: 500;
+    text-align: center;
+}
+/*文字部分信息*/
+.info .basicInfo{
+    box-sizing: border-box;
+    width:65%;
+    background-color:#E0ECF2;
+    /* background-color: #5FD8A1; */
+    padding:50px 40px 25px;
+    color:#555;
+}
+.info .basicInfo>div{
+    margin-bottom: 25px;
+}
+.info .basicInfo .details{
+    display: flex;
+    flex-wrap: wrap;
+}
+.info .basicInfo h2{
+    margin-bottom: 35px;
+}
+.info .basicInfo .details .item{
+    width:233px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.info .basicInfo .details .item>span{
+    font-weight: bold;
+    font-size: 18px;
+}
+/* 证书&评价 */
+.certificate{
+    position: relative;
+    color:#555;
+    box-sizing: border-box;
+    margin:10px 40px;
+}
+.certificate .title{transition: all 1s;}
+.certificate .angle{transition:all 1s;}
+.certificate .line{transition: width 1s;}
+.certificate .details{
+    display: none;
+    animation:in 3s;
+}
+@keyframes in{
+    from{color:transparent;}
+    to{color:#555;}
+}
+.certificate .certi{
+    width:35%;
+}
+.certificate .certi .item{
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.certificate .readme{
+    width:65%;
+    box-sizing: border-box;
+    padding-left: 40px;
+}
+.certificate .readme p{
+    font-size: 18px;
+    text-indent: 2em;
+    text-align: justify;
+}
+
+/*工作经历*/
+.expWork{position: relative; margin:10px 40px;}
+.expWork .firmDetail .item{
+    width:33%;
+}
+.expWork .firmDetail{
+    display:none;
+    animation: in 3s;
+}
+
+/*项目介绍*/
+.expWork .objDetail{
+    display:none;
+    animation: in 3s;
+}
+.expWork .objItem{position: relative;}
+.expWork .objItem .line{
+    right:0;
+    top:15px;
+    height:0px;
+    border-top:2px dashed #555;
+    background-color: transparent;
+    animation: showLine 3s;
+}
+@keyframes showLine{
+    from{border-color:transparent;}
+    to{border-color:2px dashed #555;}
+}
+.expWork .objItem .content{
+    display: none;
+    animation: in 1s ;
+}
+.expWork .objItem .angle{transform: scale(0.9);}
+.expWork .objItem p{width:90%;text-align: justify;}
+
+/*校园经历*/
+.expSchool{position: relative; margin:0 40px;}
+.expSchool .details{display: none;animation: in 3s;}
+.expSchool .details .item{position: relative;}
+.expSchool .details .item:first-child{margin-top:10px;}
+.expSchool .details .item .con{display: none;animation: in 3s;}
+.expSchool .details .item .line{
+    right:0;
+    top:15px;
+    height:0px;
+    border-top:2px dashed #555;
+    background-color: transparent;
+}
+.expSchool .details .item .halve{width:50%;}
+.expSchool .details .item .angle{transform: scale(0.9);}
+.expSchool .details .item p{width:90%;text-align: justify;}
+
+/*我的作品*/
+.projects{
+    box-sizing: border-box;
+    padding:0 40px;
+}
+.projects h2{margin-top: 10px;}
+.projects .proShow{
+    list-style-type: none;
+    width:100%;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    background-color: #ccc;
+    box-sizing: border-box;
+    padding:10px;
+}
+.projects .proShow .item{
+    width:30%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding:12px;
+    /* margin-bottom: 10px; */
+    margin:5px 18px;
+}
+.projects .proShow .item a{
+    position: relative;
+    display: block;
+    width:100%;
+    text-decoration: none;
+    color:inherit;
+    overflow: hidden;
+}
+.projects .proShow .item a img{
+    width:100%;
+    height: 220px;
+}
+.projects .proShow .item a>span{
+    display: block;
+    width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.projects .proShow .item a .mask{
+    position: absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:#E0ECF2;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: hidden;
+}
+.projects .proShow .item a:hover .mask{
+    transform: translateY(-100%);
+    transition: transform 1s;
+}
+/*我的技能*/
+.skills{
+    box-sizing: border-box;
+    padding: 0 40px;
+}
+.skills .skillList{
+    padding-left: 20px;
+}
