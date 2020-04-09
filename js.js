@@ -63,8 +63,8 @@
                     <div class="title"><span class="angle"></span> <h3>项目${i+1}：${arr[i].title}</h3></div><div class="line"></div>
                     <div class="content">
                         <div class="objTime mrTop mrBot"><b>项目时间：</b>${arr[i].time}</div>
-                        <div class="objIntro mrBot flex"><b>项目描述：</b><p>${arr[i].intro}</p> </div>
-                        <div class="myWork flex"><b>项目职责：</b><p>${arr[i].myWork}</p></div>
+                        <div class="objIntro mrBot flex"><span>项目描述：</span><p>${arr[i].intro}</p> </div>
+                        <div class="myWork flex"><span>项目职责：</span><p>${arr[i].myWork}</p></div>
                     </div>
                 </div>
             `
@@ -88,8 +88,8 @@
                             <div class="name halve"><b>${arr[i].nameTitle}</b>${arr[i].name}</div>
                             <div class="time halve"><b>${arr[i].timeTitle}</b>${arr[i].time}</div>
                         </div>
-                        <div class="intro flex mrBot"><b>${arr[i].introTitle}</b><p>${arr[i].intro}</p></div>
-                        <div class="mywork flex" style="display:${arr[i].myWorkTitle?'flex':'none'}"><b>${arr[i].myWorkTitle}</b><p>${arr[i].myWork}</p></div>
+                        <div class="intro flex mrBot"><span>${arr[i].introTitle}</span><p>${arr[i].intro}</p></div>
+                        <div class="mywork flex" style="display:${arr[i].myWorkTitle?'flex':'none'}"><span>${arr[i].myWorkTitle}</span><p>${arr[i].myWork}</p></div>
                     </div>
                 </div>
             `

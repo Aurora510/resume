@@ -11,6 +11,7 @@ body{color:#555;font-size: 18px;}
 }
 .mrTop{margin-top:20px;}
 .mrBot{margin-bottom:10px;}
+.mrAll{margin:10px 40px;}
 
 /*统一样式设置*/
 /*小三角*/
@@ -112,7 +113,6 @@ body{color:#555;font-size: 18px;}
     position: relative;
     color:#555;
     box-sizing: border-box;
-    margin:10px 40px;
 }
 .certificate .title{transition: all 1s;}
 .certificate .angle{transition:all 1s;}
@@ -144,7 +144,7 @@ body{color:#555;font-size: 18px;}
 }
 
 /*工作经历*/
-.expWork{position: relative; margin:10px 40px;}
+.expWork{position: relative;}
 .expWork .firmDetail .item{
     width:33%;
 }
@@ -152,7 +152,16 @@ body{color:#555;font-size: 18px;}
     display:none;
     animation: in 3s;
 }
-
+.expWork .firmDetail .intro p{
+    width:90%;
+}
+.expWork .firmDetail .intro span{
+    font-weight: bold;
+}
+.expWork .objItem .content .objIntro span,
+.expWork .objItem .content .myWork span,
+.expSchool .details .item .intro span,
+.expSchool .details .item .mywork span{font-weight: bold;display: inline-block;width:96px;}
 /*项目介绍*/
 .expWork .objDetail{
     display:none;
@@ -215,7 +224,6 @@ body{color:#555;font-size: 18px;}
     background-color: #fff;
     box-sizing: border-box;
     padding:12px;
-    /* margin-bottom: 10px; */
     margin:5px 18px;
 }
 .projects .proShow .item a{
@@ -260,3 +268,100 @@ body{color:#555;font-size: 18px;}
 .skills .skillList{
     padding-left: 20px;
 }
+
+/*平板显示-当屏幕小于1200px时*/
+
+@media screen and (max-width:1199px){
+    
+    .mrAll{margin:10px 30px;}
+    .title h3{width: 94%; vertical-align: top;}
+
+    #container{
+        width:100%;
+        margin:0;
+    }
+    .info .photo{width:54%;}
+    .info .basicInfo{width:46%;}
+    .expWork .firmDetail .flex:first-child{flex-wrap: wrap;}
+    .expWork .firmDetail .item{width:auto; margin:5px 20px 0 0;}
+    .expWork .objItem .title{width:100%;}
+    .expWork .firmDetail .intro span{display: inline-block;width: 96px;}
+    .expSchool .details .item .title h3{width:84%;}
+    .expSchool .details .item .title{width:180px;}
+    .expSchool .details .item .halve{width:auto;margin-right: 20px;}
+    /*作品*/
+    .projects{padding:0;}
+    .projects h2{padding-left: 30px;}
+    .projects .proShow{justify-content: space-between; padding:20px;}
+    .projects .proShow .item{
+        width:48%;
+        margin:5px;
+        padding:8px;
+        border-radius: 5px;
+    }
+    .projects .proShow .item a img{
+        width:40%;
+        height:120px;
+        border:1px solid #efefef;
+        overflow: hidden;
+        box-sizing:border-box;
+    }
+    .projects .proShow .item a>span{display: none;}
+    .projects .proShow .item a .mask{
+        width:60%;
+        top:0;
+        left:40%;
+        background-color: #fff;
+        padding:0 0 0 10px;
+        overflow: scroll;
+    }
+    /*技能*/
+    .skills{padding:0 30px;}
+}
+
+/*移动端显示-当屏幕小于500px时*/
+
+@media screen and (max-width: 500px){
+    body{font-size: 16px;}
+    .mrAll{margin:20px;}
+    .mrTop{margin-top: 10px;}
+    .title h3{width: 90%;}
+
+    /*个人基础信息*/
+    .info{
+        flex-direction: column;
+        margin-bottom: 22px;
+    }
+    .info .photo{
+        width:100%;
+        display: block;
+    }
+    .info .photo .image{margin:30px auto;}
+    .info .photo .name{font-size: 34px;}
+    .info .photo .engName{font-size: 22px;}
+    .info .basicInfo{
+        width:100%;
+        padding:20px;
+    }
+    /*证书&自我评价*/
+    .certificate .details{flex-direction: column;}
+    .certificate .certi{width:100%;}
+    .certificate .readme{width:100%;padding-left: 0;}
+    /*工作经历*/
+    .expWork .firmDetail .item{width:100%;margin: 5px 0 0 0;}
+    .expWork .firmDetail .other{flex-direction: column;}
+    /*校园经历*/
+    .expSchool .title h3{width:auto;}
+    .expSchool .details .item .con div:first-child{flex-direction: column;}
+    .expSchool .details .item .con div:first-child>div{width: 100%;margin-bottom: 5px;}
+    /*作品*/
+    .projects{padding:0;}
+    .projects h2{padding-left: 20px;}
+    .projects .proShow{padding:10px;}
+    .projects .proShow .item{width:100%;}
+    
+    /*技能*/
+    .skills{padding:0 20px;}
+}
+
+
