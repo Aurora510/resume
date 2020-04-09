@@ -315,6 +315,11 @@ body{color:#555;font-size: 18px;}
         padding:0 0 0 10px;
         overflow: scroll;
     }
+    /*清除hover效果*/
+    .projects .proShow .item a:hover .mask{
+        transform: translateY(0);
+        transition: none;
+    }
     /*技能*/
     .skills{padding:0 30px;}
 }
